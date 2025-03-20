@@ -1,0 +1,2 @@
+# LINKEDLIST
+code of linkedlist
