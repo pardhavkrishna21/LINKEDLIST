@@ -1,0 +1,9 @@
+                                                    ****************to find the middle node of the linked list***************
+#brute force:
+initally iterating over all the nodes until we get null to find the length , using the length we can iterate upto the length and we can find the middle element.
+#optimal:
+by using the two pointer concept where we will have two pointers slow_pointer abd fast_pointer
+slow_pointer will move slow like it will to next node only
+fast_pointer will move fast compare to slow like at one iteration it will move to next 2 nodes
+slow_pointer = head.next
+fast_pointer=head.next.next
