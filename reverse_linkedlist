@@ -1,0 +1,90 @@
+                                                           **************reverse of a linked list****************
+**** - ># reverse the linked list means not the first node should contain last node value,
+reverse the linkedlist means the first  node should be last and the last node should be first.
+so we have to change the nodes from start to end and end to start node;
+ex:
+   1 -> 2 -> 4 -> 3 -> 8 -> 9
+   ^    ^    ^    ^    ^    ^
+   |    |    |    |    |    |
+   1st  2nd  3rd  4th  5th  6th there are nodes 
+
+so we have to change the nodes like the following below:
+  9 -> 8 -> 3 -> 4 -> 2 -> 1
+  ^    ^    ^    ^    ^    ^
+  |    |    |    |    |    |
+  6th  5th  4th  3rd  2nd  1st
+we have to rearrange like this
+
+approach :
+      we will take another  null linkedlist.
+by using the null linkedlist we will attach the delete starting nodes to null linkedlist
+       
+      1   -----> 2 -> 4 -> 3 -> 8 -> 9
+      ^
+      |
+  head,temp        
+                          null=h2;
+   temp = head.next;
+
+    1 =====>  2 ===> 4 => 3 => 8 => 9
+    ^         ^
+    |         |
+  head       temp 
+                        null=h2;
+
+now we will attach head.next = h2;
+
+         2 ===> 4 => 3 => 8 => 8 =>9
+
+                        1=>null
+                            ^
+                            |
+                            h2
+now we will h2 to 1 because we have get the reference of head
+
+h2 = head;
+   2====>4=>3=>8=>9
+   ^
+   |
+ temp             
+                  1==>null
+                  ^
+                  |
+                  h2
+now one node came to end like this we need to again and again the head should go to temp node;
+head.next = temp;
+    2=====> 4 => 3 => 8 => 9
+    ^
+    |
+ head,temp
+                          1 => null
+                          ^
+                          |
+                          h2
+same steps unitl all nodes reach and head!=null 
+finally the head will become h2;
+
+
+code:
+#leetcode problem : 206
+
+
+sol:
+class Solution {
+    public ListNode reverseList(ListNode head) {
+        ListNode h2= null;
+        while(head!=null) {
+        ListNode temp = head.next;
+            head.next = h2;
+            h2 =head;
+            head = temp;
+        }
+     return h2;   
+    }
+}
+
+
+
+
+
+ 
