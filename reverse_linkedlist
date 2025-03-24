@@ -24,7 +24,7 @@ by using the null linkedlist we will attach the delete starting nodes to null li
       |
   head,temp        
                           null=h2;
-   temp = head.next;
+   temp = head.next; 
 
     1 =====>  2 ===> 4 => 3 => 8 => 9
     ^         ^
