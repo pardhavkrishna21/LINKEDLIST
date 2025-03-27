@@ -20,7 +20,7 @@ approach :
 by using the null linkedlist we will attach the delete starting nodes to null linkedlist
        
       1   -----> 2 -> 4 -> 3 -> 8 -> 9
-      ^
+      ^ 
       |
   head,temp        
                           null=h2;
