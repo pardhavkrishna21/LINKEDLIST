@@ -3,7 +3,7 @@
 reverse the linkedlist means the first  node should be last and the last node should be first.
 so we have to change the nodes from start to end and end to start node;
 ex:
-   1 -> 2 -> 4 -> 3 -> 8 -> 9
+   1 -> 2 -> 4 -> 3 -> 8 -> 9  
    ^    ^    ^    ^    ^    ^
    |    |    |    |    |    |
    1st  2nd  3rd  4th  5th  6th there are nodes 
